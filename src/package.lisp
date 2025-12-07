@@ -4,7 +4,8 @@
   (:export #:make-box #:box-val))
 
 (defpackage #:djeis.ptrees.bst
-  (:export #:lookup #:insert! #:delete! #:merge!
+  (:export #:lookup #:lookup-glb #:lookup-lub #:mapkv #:reducekv
+           #:insert! #:delete! #:merge!
            #:make-wb-tree #:transient-for #:persistent!))
 
 (defpackage #:djeis.ptrees.hamt

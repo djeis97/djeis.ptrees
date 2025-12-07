@@ -161,6 +161,7 @@
    already in the order that would have been applied by tree1's key and cmp."
   (check-type tree1 ttree)
   (check-type tree2 ptree)
+  (assert (eq (bt:current-thread) (box-val (ttree-transient-box tree1))))
   (let ((joiner (ttree-joiner tree1)))
     (setf (base-tree-root tree1)
           (labels ((merge-trees (t1 t2)
